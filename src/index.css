@@ -1,0 +1,267 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  line-height: 1.75;
+  color: #0A0A0C;
+  background: #F8F8F6;
+  position: relative;
+}
+
+/* ─── Page subtle ambient glow ─── */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse 100% 45% at 50% -10%, rgba(122,130,136,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* ─── Hero grain noise ─── */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+  pointer-events: none;
+}
+
+/* ─── Status dot pulse ─── */
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22C55E;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  flex-shrink: 0;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5);
+  }
+  50% {
+    opacity: 0.7;
+    box-shadow: 0 0 0 6px rgba(34, 197, 94, 0);
+  }
+}
+
+/* ─── Scroll reveal ─── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── Separator lines that grow ─── */
+.separator {
+  height: 1px;
+  background: #E2E4E8;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.separator.grown {
+  transform: scaleX(1);
+}
+
+/* ─── Nav link hover underline animation ─── */
+.nav-link-btn {
+  position: relative;
+}
+.nav-link-btn::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #2563EB;
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.nav-link-btn:hover::after {
+  width: 100%;
+}
+.nav-link-btn:hover {
+  color: #0A0A0C !important;
+}
+
+/* ─── Pill button hover gradient ─── */
+.pill-btn {
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease !important;
+  z-index: 1;
+}
+.pill-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #0A0A0C;
+  border-radius: 100px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+.pill-btn:hover {
+  color: #F8F8F6 !important;
+}
+.pill-btn:hover::before {
+  opacity: 1;
+}
+
+/* ─── Project card hover image effect ─── */
+.project-card-img {
+  transition: filter 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.project-card-img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.03);
+}
+
+/* ─── Section eyebrow subtle hover lift ─── */
+.section-eyebrow {
+  transition: opacity 0.3s ease;
+}
+section:hover .section-eyebrow {
+  opacity: 0.8;
+}
+
+/* ─── Social link hover effect ─── */
+.social-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+.social-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #2563EB;
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.social-link:hover {
+  color: #0A0A0C !important;
+}
+.social-link:hover::after {
+  width: 100%;
+}
+
+/* ─── Project card entrance animation ─── */
+.project-card {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: cardFadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes cardFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ─── Diagram button hover ─── */
+.diagram-btn {
+  transition: all 0.2s ease !important;
+}
+.diagram-btn:hover {
+  background: #2563EB !important;
+  color: #F8F8F6 !important;
+  border-color: #2563EB !important;
+}
+
+/* ─── Modal enter animation (spring-like) ─── */
+@keyframes modalEnter {
+  from {
+    transform: translateY(30px) scale(0.96);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+/* ─── Reduced motion ─── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal,
+  .project-card {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ─── Mobile ─── */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none !important;
+  }
+
+  /* Stack grid columns on mobile */
+  .grid-2col {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  .right-column-skills {
+    padding-left: 0 !important;
+    border-left: none !important;
+  }
+
+  .right-column-spacer {
+    display: none !important;
+  }
+}
