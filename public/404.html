@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rodrigo Riffo — Portfolio</title>
+    <script>
+      // Redirigir a la SPA en GitHub Pages
+      sessionStorage.redirect = location.href;
+    </script>
+    <meta http-equiv="refresh" content="0;URL='/Portfolio/'" />
+  </head>
+  <body>
+    <script>
+      // Fallback: si el meta refresh no funciona
+      if (!sessionStorage.redirect) {
+        location.href = '/Portfolio/';
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,121 @@
+{
+  "id": 5,
+  "title": "AnimalWatch",
+  "subtitle": "Gestión de protectoras con roles, mapa interactivo, auditoría con rollback y email transaccional",
+  "coverColor": "#2D1B69",
+  "stack": ["React", "TypeScript", "Java", "Spring Boot", "MySQL", "Docker"],
+  "meta": {
+    "period": "2026",
+    "duration": "14 semanas",
+    "role": "Desarrollador Full-Stack — Trabajo en equipo (frontend + backend)",
+    "tools": "React 19 · Vite · Tailwind CSS 4 · Radix UI · Leaflet · React Router 7 · Axios · Zod · Spring Boot 4 · Spring Security · Spring Data JPA · MySQL · Docker · MinIO · Resend (SMTP)"
+  },
+  "images": [
+    { "src": "/studycases/animalwatch/images/landing.png", "caption": "Landing page — Página principal pública con información sobre la protectora y acceso a funcionalidades." },
+    { "src": "/studycases/animalwatch/images/landingMapFilter.png", "caption": "Landing con mapa — Vista pública con mapa interactivo de centros y clínicas, filtros de búsqueda geográfica." },
+    { "src": "/studycases/animalwatch/images/login.png", "caption": "Login — Pantalla de inicio de sesión con formulario de credenciales." },
+    { "src": "/studycases/animalwatch/images/masterDashboard.png", "caption": "Dashboard principal — KPIs en tiempo real: citas hoy, próximas 48h, pendientes, animales no adoptados. Agenda semanal y actividad reciente." },
+    { "src": "/studycases/animalwatch/images/masterDashboardSidebar.png", "caption": "Dashboard con sidebar — Navegación lateral expandida mostrando las secciones de gestión del sistema." },
+    { "src": "/studycases/animalwatch/images/animalsTable.png", "caption": "Gestión de animales — Tabla paginada con filtros combinables (especie, raza, estado de salud, estado de adopción, centro)." },
+    { "src": "/studycases/animalwatch/images/registerAnimal.png", "caption": "Registrar animal — Formulario de registro de nuevo animal con datos básicos, especie, raza y estado." },
+    { "src": "/studycases/animalwatch/images/animalRecord.png", "caption": "Ficha de animal — Vista detalle con galería de imágenes, historial clínico, citas asociadas y datos de adopción." },
+    { "src": "/studycases/animalwatch/images/newCat.png", "caption": "Nuevo gato — Formulario específico para registro de animal con campos adicionales de la especie." },
+    { "src": "/studycases/animalwatch/images/centersList.png", "caption": "CRUD de centros — Listado de centros de acogida con tabla, filtros y acciones de gestión." },
+    { "src": "/studycases/animalwatch/images/centerDetail.png", "caption": "Detalle de centro — Vista detallada de un centro con información de contacto, capacidad y animales alojados." },
+    { "src": "/studycases/animalwatch/images/createCenter.png", "caption": "Crear centro — Formulario de creación de nuevo centro con datos de ubicación y capacidad." },
+    { "src": "/studycases/animalwatch/images/editCenter.png", "caption": "Editar centro — Formulario de edición de centro con campos pre-rellenados." },
+    { "src": "/studycases/animalwatch/images/centerRecord.png", "caption": "Ficha de centro — Vista completa de un centro con animales, personal y estadísticas." },
+    { "src": "/studycases/animalwatch/images/newCenter.png", "caption": "Nuevo centro — Formulario alternativo de creación de centro con mapa de ubicación." },
+    { "src": "/studycases/animalwatch/images/deleteCenter.png", "caption": "Eliminar centro — Diálogo de confirmación para eliminación de centro con advertencia de datos asociados." },
+    { "src": "/studycases/animalwatch/images/clinicDetail.png", "caption": "CRUD de clínicas — Listado de clínicas veterinarias asociadas con tabla y acciones." },
+    { "src": "/studycases/animalwatch/images/createClinic.png", "caption": "Crear clínica — Formulario de registro de nueva clínica veterinaria con datos de contacto." },
+    { "src": "/studycases/animalwatch/images/editClinic.png", "caption": "Editar clínica — Formulario de edición de clínica con campos pre-rellenados." },
+    { "src": "/studycases/animalwatch/images/clinicRecord.png", "caption": "Ficha de clínica — Vista detallada de una clínica con información de contacto y servicios." },
+    { "src": "/studycases/animalwatch/images/newClinic.png", "caption": "Nueva clínica — Formulario alternativo de creación de clínica con mapa." },
+    { "src": "/studycases/animalwatch/images/speciesBreedManagement.png", "caption": "CRUD de razas y especies — Gestión de catálogo de especies y razas disponibles en el sistema." },
+    { "src": "/studycases/animalwatch/images/createSpecies.png", "caption": "Crear especie — Formulario para añadir una nueva especie al catálogo." },
+    { "src": "/studycases/animalwatch/images/masterUsers.png", "caption": "Gestión de usuarios (Maestro) — Tabla de usuarios del sistema con roles y acciones de administración." },
+    { "src": "/studycases/animalwatch/images/employeeUsers.png", "caption": "Gestión de usuarios (Empleado) — Vista de usuarios con permisos limitados según el rol." },
+    { "src": "/studycases/animalwatch/images/volunteerUsers.png", "caption": "Gestión de usuarios (Voluntario) — Vista de usuarios con alcance restringido a datos permitidos." },
+    { "src": "/studycases/animalwatch/images/clientUsers.png", "caption": "Gestión de usuarios (Cliente) — Vista de clientes registrados con información de contacto." },
+    { "src": "/studycases/animalwatch/images/clientRecord.png", "caption": "Ficha de cliente — Vista detallada de un cliente con animales asociados e historial de citas." },
+    { "src": "/studycases/animalwatch/images/vetAppointment.png", "caption": "Cita veterinaria — Formulario de agendamiento de cita veterinaria con selección de animal y clínica." },
+    { "src": "/studycases/animalwatch/images/scheduleAppointmentModal.png", "caption": "Modal de agendar cita — Diálogo modal para agendar cita con selección de fecha, hora y motivo." },
+    { "src": "/studycases/animalwatch/images/requestAdoptionAppointment.png", "caption": "Solicitar cita de adopción — Formulario de solicitud de cita para adopción de un animal." },
+    { "src": "/studycases/animalwatch/images/requestAppointmentUnauthenticated.png", "caption": "Solicitar cita sin loguear — Formulario público de solicitud de cita para usuarios no autenticados." },
+    { "src": "/studycases/animalwatch/images/audit.png", "caption": "Panel de auditoría — Listado de eventos con filtros por entidad, acción, actor y rango de fechas." },
+    { "src": "/studycases/animalwatch/images/auditFiltered.png", "caption": "Auditoría filtrada — Resultados de auditoría con filtros activos aplicados." },
+    { "src": "/studycases/animalwatch/images/activationEmail.jpeg", "caption": "Email de activación — Plantilla de correo electrónico para activación de cuenta de usuario." },
+    { "src": "/studycases/animalwatch/images/adoptionEmail.jpeg", "caption": "Email de adopción — Plantilla de correo electrónico de confirmación de cita de adopción." }
+  ],
+  "readme": {
+    "summary": "Gestión de protectoras con la precisión de un backend empresarial y la fluidez de una interfaz que no estorba.",
+    "sections": [
+      {
+        "heading": "Nota sobre las capturas",
+        "content": "Algunas capturas fueron tomadas con un plugin de página completa que no siempre captura el navbar ni el sidebar correctamente. Esto es una limitación técnica de la herramienta de captura, no un error de la interfaz. La aplicación real sí incluye navegación completa con sidebar colapsable y navbar funcional en todas las vistas."
+      },
+      {
+        "heading": "El Problema",
+        "content": "Las protectoras de animales operan con herramientas de propósito general que no se adaptan a flujos específicos como la coordinación entre centros y clínicas veterinarias, la gestión de voluntarios con distintos permisos o la trazabilidad de cada acción. La ausencia de un sistema de recuperación ante errores humanos convierte cualquier equivocación en una pérdida irreversible de información."
+      },
+      {
+        "heading": "La Solución",
+        "content": "Plataforma web con jerarquía de roles clara (Maestro, Jefe, Empleado, Voluntario, Cliente) que centraliza la gestión de animales, usuarios, centros, clínicas y citas. Incluye KPIs en tiempo real, mapas interactivos, auditoría con rollback y notificaciones por email transaccionales."
+      },
+      {
+        "heading": "Roles y Flujos Permitidos",
+        "content": "El sistema define cinco roles con una jerarquía de permisos progresiva, tanto en frontend (navegación visible) como en backend (endpoints autorizados vía @PreAuthorize).",
+        "bullets": [
+          "Cliente — Portada pública, agendar cita veterinaria (solo si tiene animal en acogida), agendar cita de adopción, ver perfil. CRUD de sus propios animales (solo lectura).",
+          "Voluntario — Dashboard con sidebar, gestión de animales, centros, clínicas, citas. No puede crear/editar usuarios, modificar diagnóstico/tratamiento ni acceder a auditoría.",
+          "Empleado — CRUD completo de animales, centros, clínicas (solo lectura si no es jefe), especies y razas. Gestiona citas. No puede crear/editar usuarios con rol elevado.",
+          "Jefe — CRUD de usuarios (excepto Maestro), CRUD de centros y clínicas, ver logs de auditoría. No puede hacer rollback ni eliminar centros.",
+          "Maestro — Acceso total. Puede eliminar centros, hacer rollback de cualquier operación, gestionar cualquier usuario incluidos otros maestros."
+        ]
+      },
+      {
+        "heading": "Diagrama de Arquitectura",
+        "content": "Arquitectura del sistema AnimalWatch — Cliente React 19 con Leaflet y Radix UI que se comunica con un backend Spring Boot 4 vía Nginx como proxy inverso. El backend implementa Spring Security con JWT y roles, un servicio de auditoría con rollback (snapshot-based), envío de emails asíncrono con @Async, y almacenamiento S3-compatible con MinIO para imágenes. Los datos se persisten en MySQL 5.7. Los emails transaccionales se envían mediante Resend SMTP.",
+        "code": "%%{init: {\"theme\": \"neutral\", \"themeVariables\": {\"primaryColor\": \"#1a73e8\", \"lineColor\": \"#5f6368\"}}}%%\ngraph TB\n    subgraph Cliente[\"🌐 Cliente (Navegador)\"]\n        direction TB\n        ReactApp[\"React 19 + Vite<br/>SPA\"]\n        Leaflet[\"🗺️ Leaflet Mapas\"]\n        RadixUI[\"🎨 Radix UI + Tailwind\"]\n    end\n\n    subgraph Docker[\"🐳 Docker Compose\"]\n        direction TB\n        \n        subgraph Frontend[\"Frontend Layer\"]\n            Nginx[\"Nginx<br/>Servidor Estático<br/>Proxy Inverso /api/*\"]\n        end\n\n        subgraph Backend[\"Backend Layer\"]\n            SpringBoot[\"Spring Boot 4<br/>API REST\"]\n            SpringSecurity[\"🔐 Spring Security<br/>JWT + Roles\"]\n            AuditService[\"📋 AuditService<br/>Rollback\"]\n            EmailService[\"📧 EmailService<br/>@Async\"]\n            StorageService[\"🖼️ StorageService<br/>S3-compatible\"]\n        end\n\n        subgraph Data[\"Data Layer\"]\n            MySQL[(\"🐬 MySQL 5.7<br/>Datos principales\")]\n            MinIO[(\"📦 MinIO<br/>Imágenes S3\")]\n        end\n    end\n\n    subgraph External[\"🌍 Servicios Externos\"]\n        Resend[\"Resend SMTP<br/>Email transaccional\"]\n    end\n\n    ReactApp -->|\"HTTP :8081\"| Nginx\n    Leaflet -->|\"Tile Layer\"| OSM[\"OpenStreetMap Tiles\"]\n    Nginx -->|\"/api/* → :8080\"| SpringBoot\n    Nginx -->|\"Estáticos\"| ReactApp\n    SpringBoot --> SpringSecurity\n    SpringBoot --> AuditService\n    SpringBoot --> EmailService\n    SpringBoot --> StorageService\n    SpringBoot --> MySQL\n    StorageService --> MinIO\n    EmailService -->|\"SMTP :587\"| Resend\n    ReactApp -.->|\"http://localhost:9002/images/*\"| MinIO"
+      },
+
+      {
+        "heading": "Decisiones Técnicas & Trade-offs",
+        "bullets": [
+          "MinIO (S3-compatible) vs. sistema de archivos local: Desacopla el almacenamiento del servidor, permite escalar horizontalmente sin sincronizar archivos y facilita migrar a AWS S3. El coste es un servicio adicional en Docker Compose y la configuración de URLs públicas que pueden causar problemas si cambian los puertos.",
+          "Auditoría snapshot-based vs. event sourcing: Guarda el estado anterior/posterior de cada operación crítica mediante AOP con @Auditable. El rollback restaura el estado anterior con una transacción inversa. No permite revertir cambios intermedios ni replay de eventos, pero cubre el caso crítico (recuperación ante errores) con una fracción de la complejidad de Axon o Kafka.",
+          "@Async con TransactionPhase.AFTER_COMMIT vs. cola de mensajes: Los emails se envían en hilo separado solo si la transacción se completa, sin bloquear la respuesta. Si Resend falla, la excepción se pierde a menos que se implemente una DLQ. Para el volumen de una protectora, la solución con @Async cubre el 99% de los casos sin infraestructura adicional."
+        ]
+      },
+      {
+        "heading": "Arquitectura & Estructura del Proyecto",
+        "content": "Feature-Based Architecture: cada módulo funcional (animales, usuarios, centros, clínicas, citas) agrupa sus páginas, componentes y servicios en una estructura coherente.",
+        "bullets": [
+          "Custom Hooks reutilizables (useAuth, useAnimalFormModal, useForm) encapsulan la lógica de consumo de APIs, estados de carga y errores.",
+          "MainLayout con sidebar colapsable y rutas protegidas por rol. Componentes UI sobre primitivas de Radix UI estilizadas con Tailwind CSS.",
+          "AuthProvider y ThemeProvider como contextos globales independientes, desacoplados del árbol de rutas."
+        ]
+      },
+      {
+        "heading": "Soluciones Técnicas",
+        "content": "API REST con paginación nativa de Spring Data y filtros combinables. Sistema de roles con @PreAuthorize y frontend que adapta navegación y acciones según el rol. Auditoría completa con rollback: cada operación crítica registra antes/después en AuditLog, y RollbackService revierte cambios mediante transacción inversa. Emails asíncronos con @Async y TransactionPhase.AFTER_COMMIT para activación de cuenta, confirmación de citas y adopciones."
+      },
+      {
+        "heading": "Soluciones a Nivel Frontend (Criterio Visual)",
+        "content": "Sidebar colapsable con persistencia en localStorage por usuario, recordando la preferencia entre sesiones — un detalle que elimina fricción en el día a día del equipo.",
+        "bullets": [
+          "Dashboard con KPIs en tiempo real: cada tarjeta de indicador es un enlace directo a la vista filtrada correspondiente. El usuario nunca reconstruye manualmente una búsqueda.",
+          "Mapas interactivos con Leaflet: centros y clínicas sobre mapa con marcadores personalizados, colores por estado y popups con información contextual."
+        ]
+      },
+      {
+        "heading": "Mi Impacto",
+        "content": "Mi contribución abarcó desde la capa más técnica —mapas interactivos con Leaflet, CRUDs completos de animales, usuarios, centros y clínicas, componentes reutilizables como tablas paginadas y formularios con validación— hasta la integración del sistema de notificaciones por email con Resend y la participación en la definición del sistema de diseño e identidad visual. Este perfil híbrido permitió que el producto final no solo funcionara de manera sólida, sino que se sintiera coherente, cuidado y profesional en cada interacción."
+      }
+    ]
+  },
+  "links": [
+    { "label": "GitHub", "url": "https://github.com/RdrgRffo/AnimalWatch" }
+  ]
+}

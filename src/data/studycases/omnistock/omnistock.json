@@ -1,0 +1,100 @@
+{
+  "id": 4,
+  "title": "OmniStock",
+  "subtitle": "SaaS de inventario consolidado con simulación de presupuestos B2B y analytics BI",
+  "coverColor": "#533483",
+  "stack": ["React", "TypeScript", "Java", "Spring Boot", "MariaDB", "Docker"],
+  "meta": {
+    "period": "2025",
+    "duration": "10 semanas",
+    "role": "Full-Stack — Backend Lead, Sistema de Diseño Frontend, DevOps",
+    "tools": "React 18 · TypeScript · Vite · TanStack React Query · Tailwind CSS · Java 21 · Spring Boot 3.2 · MariaDB · Docker"
+  },
+  "images": [
+    { "src": "/studycases/omnistock/images/login.png", "caption": "Login — Pantalla de inicio de sesión con formulario de credenciales y diseño corporativo." },
+    { "src": "/studycases/omnistock/images/dashboard.png", "caption": "Dashboard ejecutivo — KPIs de salud operativa (total SKUs, proveedores activos, stock medio, precio medio) con gráfico de barras apiladas." },
+    { "src": "/studycases/omnistock/images/supplierDashboard.png", "caption": "Dashboard de proveedor — Vista detallada de métricas por proveedor con indicadores de rendimiento." },
+    { "src": "/studycases/omnistock/images/consolidatedInventory.png", "caption": "Inventario consolidado — Vista unificada del inventario de todos los proveedores con stock agregado." },
+    { "src": "/studycases/omnistock/images/inventorySearch.png", "caption": "Búsqueda en inventario — Filtros de búsqueda combinables sobre el inventario consolidado." },
+    { "src": "/studycases/omnistock/images/product.png", "caption": "Detalle de producto — Vista detallada con información, precios, stock e histórico de precios." },
+    { "src": "/studycases/omnistock/images/productPriceHistory.png", "caption": "Histórico de precios — Gráfico de evolución de precios de un producto a lo largo del tiempo." },
+    { "src": "/studycases/omnistock/images/supplierList.png", "caption": "Lista de proveedores — Tabla con todos los proveedores, estados y acciones de gestión." },
+    { "src": "/studycases/omnistock/images/supplierDetails.png", "caption": "Detalles de proveedor — Vista detallada con información de contacto, catálogo y estado de sincronización." },
+    { "src": "/studycases/omnistock/images/budgetDraft.png", "caption": "Presupuesto en borrador — Simulador de presupuesto con productos añadidos y carrito lateral." },
+    { "src": "/studycases/omnistock/images/budgetInProgress.png", "caption": "Presupuesto en edición — Proceso de creación de presupuesto con selección de productos y cantidades." },
+    { "src": "/studycases/omnistock/images/completedBudget.png", "caption": "Presupuesto completado — Presupuesto finalizado con resumen, totales y opciones de exportación." },
+    { "src": "/studycases/omnistock/images/analyticsCatalog.png", "caption": "Analytics de catálogo — Métricas y gráficos sobre la composición del catálogo de productos." },
+    { "src": "/studycases/omnistock/images/analyticsPrices.png", "caption": "Analytics de precios — Análisis de distribución de precios y comparativas por proveedor." },
+    { "src": "/studycases/omnistock/images/analyticsStock.png", "caption": "Analytics de stock — Visualización de niveles de stock, rotación y alertas de stock bajo." },
+    { "src": "/studycases/omnistock/images/analyticsOpportunities.png", "caption": "Analytics de oportunidades — Identificación de oportunidades de compra y ahorro por proveedor." },
+    { "src": "/studycases/omnistock/images/userManagement.png", "caption": "Gestión de usuarios — Administración de usuarios del sistema con roles y permisos." },
+    { "src": "/studycases/omnistock/images/notification.png", "caption": "Notificación individual — Detalle de una notificación con información y acciones." },
+    { "src": "/studycases/omnistock/images/notifications.png", "caption": "Centro de notificaciones — Listado de notificaciones del sistema con filtros y estados." }
+  ],
+  "readme": {
+    "summary": "Inventario consolidado en tiempo real, simulación de compras con precisión de quirófano.",
+    "sections": [
+      {
+        "heading": "Nota sobre las capturas",
+        "content": "Algunas capturas fueron tomadas con un plugin de página completa que no siempre captura el navbar ni el sidebar correctamente. Esto es una limitación técnica de la herramienta de captura, no un error de la interfaz. La aplicación real sí incluye navegación completa con sidebar sticky y navbar funcional en todas las vistas."
+      },
+      {
+        "heading": "El Problema",
+        "content": "Las empresas B2B con múltiples proveedores arrastran catálogos en silos: hojas de cálculo, APIs dispares con formatos JSON inconsistentes y procesos manuales de conciliación. El ciclo de cotización podía tardar días, con errores de transcripción, stock desactualizado y márgenes mal calculados."
+      },
+      {
+        "heading": "La Solución",
+        "content": "OmniStock unifica catálogos de proveedores heterogéneos en un solo inventario normalizado mediante 4 estrategias de transformación JSON dinámicas. Sobre esta base, ofrece un simulador de presupuestos B2B con validación de stock y MOQ, notificaciones en tiempo real vía WebSocket, y un panel de analytics BI con 10 métricas nativas. El ciclo de cotización pasa de días a minutos."
+      },
+      {
+        "heading": "Diagrama de Arquitectura",
+        "content": "Arquitectura del sistema OmniStock — Cliente React SPA con TanStack Query y WebSocket STOMP que se comunica con un backend Spring Boot con 54 endpoints REST, JWT + HMAC-SHA256, RBAC con 49 permisos nominales y Resilience4j (Circuit Breaker + Retry). El backend sincroniza catálogos de proveedores externos de forma asíncrona usando 4 estrategias de transformación JSON dinámicas. Los datos se almacenan en MariaDB con Redis como caché. Todo orquestado con Docker Compose (8 servicios).",
+        "code": "flowchart TB\n    subgraph Usuario[\"👤 Usuario\"]\n        Browser[\"Navegador Web\"]\n    end\n\n    subgraph Frontend[\"🌐 Frontend React SPA\"]\n        ReactApp[\"React 18 + TypeScript + Vite\"]\n        TanStack[\"TanStack React Query<br/>(Caching y sincronización)\"]\n        Tailwind[\"Tailwind CSS<br/>(Sistema de diseño)\"]\n        WebSocket[\"WebSocket STOMP<br/>(Tiempo real)\"]\n        \n        ReactApp --> TanStack\n        ReactApp --> Tailwind\n        ReactApp --> WebSocket\n    end\n\n    subgraph Backend[\"⚙️ Backend Spring Boot\"]\n        API[\"API REST<br/>54 endpoints\"]\n        Auth[\"Auth Service<br/>JWT + HMAC-SHA256\"]\n        RBAC[\"RBAC<br/>49 permisos nominales\"]\n        Resilience[\"Resilience4j<br/>Circuit Breaker + Retry\"]\n        Async[\"Async Service<br/>Sincronización catálogos\"]\n        \n        API --> Auth\n        API --> RBAC\n        API --> Resilience\n        API --> Async\n    end\n\n    subgraph Storage[\"💾 Almacenamiento\"]\n        MariaDB[(\"MariaDB<br/>(Datos principales)\")]\n        Cache[(\"Redis Cache<br/>(Sesiones + Caché)\")]\n    end\n\n    subgraph Externas[\"🔗 APIs Externas\"]\n        Provider1[\"Proveedor A<br/>(JSON anidado)\"]\n        Provider2[\"Proveedor B<br/>(JSON plano)\"]\n        Provider3[\"Proveedor C<br/>(JSON con arrays)\"]\n    end\n\n    subgraph Docker[\"🐳 Docker Infrastructure\"]\n        DC[\"Docker Compose<br/>8 servicios\"]\n        Networks[\"Redes Docker<br/>Dedicadas\"]\n    end\n\n    Browser -->|\"HTTPS\"| ReactApp\n    ReactApp -->|\"REST + WebSocket\"| API\n    API --> MariaDB\n    API --> Cache\n    Async -->|\"Transformación JSON<br/>4 estrategias\"| Provider1\n    Async -->|\"Transformación JSON<br/>4 estrategias\"| Provider2\n    Async -->|\"Transformación JSON<br/>4 estrategias\"| Provider3\n    API --> DC\n    DC --> Networks"
+      },
+
+      {
+        "heading": "Arquitectura & Estructura del Proyecto",
+        "content": "Feature-Based Architecture: el frontend se organiza en 9 módulos funcionales independientes (auth, inventory, suppliers, dashboard, budget, analytics, users, priceHistory, notifications), cada uno con sus propias páginas, componentes y servicios.",
+        "bullets": [
+          "Sistema de diseño con componentes atómicos reutilizables (DataTable, Pagination, Badge, Modal) tipados en TypeScript.",
+          "Custom hooks (useDebounce, useFieldErrors) encapsulan la lógica de estado; TanStack Query gestiona caching y sincronización.",
+          "4 estrategias de transformación JSON dinámicas (DIRECT, NESTED, FIND_IN_ARRAY, SPLIT) configurables por proveedor sin código personalizado.",
+          "Sincronización asíncrona de catálogos con estados transaccionales y Dead Letter Queue para fallos.",
+          "Simulador de presupuestos con validación en tiempo real de stock, MOQ y precios.",
+          "Panel de analytics BI con 10 métricas nativas y datos agregados en tiempo real.",
+          "Containerización completa con Docker Compose: 8 servicios con healthchecks y redes dedicadas."
+        ]
+      },
+      {
+        "heading": "Soluciones Técnicas",
+        "content": "API REST con 54 endpoints y 49 permisos nominales protegidos por JWT con HMAC-SHA256. Resilience4j implementa un Circuit Breaker que abre el circuito tras 5 fallos en 10 segundos (espera 30s antes de reintentar), con Retry de 3 intentos con backoff exponencial y TimeLimiter de 10 segundos. Una Dead Letter Queue preserva los payloads fallidos para depuración. Las sincronizaciones de catálogos son asíncronas con estados transaccionales, notificando al frontend vía WebSocket STOMP. Todo containerizado con Docker Compose (8 servicios)."
+      },
+
+      {
+        "heading": "Decisiones Técnicas & Trade-offs",
+        "bullets": [
+          "Estrategias de transformación JSON dinámicas vs. adaptadores por proveedor: 4 estrategias parametrizables (DIRECT, NESTED, FIND_IN_ARRAY, SPLIT) cubren ~90% de los formatos externos. Incorporar un nuevo proveedor es configurar, no programar. El trade-off es menor eficiencia que un mapeo hardcodeado y la necesidad de una estrategia personalizada para formatos muy exóticos.",
+          "Simulador de presupuestos con validación síncrona vs. generación asíncrona: La validación en tiempo real detecta conflictos (stock, MOQ, precios) al añadir cada línea, no al final. Añade latencia por consulta a múltiples proveedores, mitigada con Redis caché. La alternativa asíncrona rompe la experiencia interactiva de simulación.",
+          "Sincronización asíncrona con @Async + DLQ vs. síncrona o batch: Los catálogos pueden tener miles de productos y tardar minutos. @Async libera la petición HTTP y la DLQ garantiza que ningún fallo pase desapercibido. El coste es la complejidad de estados transaccionales (IDLE → IN_PROGRESS → COMPLETED/ERROR) y la lógica de máquina de estados."
+        ]
+      },
+      {
+        "heading": "Soluciones a Nivel Frontend (Criterio Visual)",
+        "content": "Sistema de diseño coherente desde el primer componente: paleta de colores, tipografía, espaciado y sombras en Tailwind CSS que se aplican de forma consistente en todos los componentes, desde un badge hasta una tabla completa con paginación.",
+        "bullets": [
+          "Páginas CRUD con jerarquía visual clara: header con título y acciones, tabla paginada y ordenable, modales para creación/edición. Formularios con validación visual en tiempo real y skeletons.",
+          "Microinteracciones con Framer Motion: transiciones entre rutas, aparición de tablas y notificaciones WebSocket con transición fluida desde el borde superior.",
+          "Simulador de presupuestos con experiencia de carrito de compra: pantalla partida con productos a la izquierda y carrito lateral a la derecha. Cada línea muestra validación de MOQ con código de colores (verde/ámbar/rojo).",
+          "Dashboard de analytics con 10 tarjetas de métricas, indicadores de tendencia (↑/↓) y gráfico de salud operativa con barras apiladas por estado."
+        ]
+      },
+      {
+        "heading": "Mi Impacto",
+        "content": "Mi perfil full-stack fue el puente entre la lógica de negocio y la experiencia de usuario. Diseñé e implementé la API REST completa (54 endpoints, 49 permisos, resiliencia con Resilience4j) y, al mismo tiempo, definí el sistema de diseño del frontend y desarrollé los componentes funcionales y páginas CRUD. Lideré la arquitectura de sincronización asíncrona con Dead Letter Queue, diseñé las 4 estrategias de transformación JSON, y construí el simulador de presupuestos que reduce el ciclo de cotización de días a minutos. Resultado: 486 tests (74% cobertura backend), 8 servicios Docker, y una plataforma visualmente coherente."
+      }
+    ]
+  },
+  "links": [
+    { "label": "GitHub", "url": "https://github.com/RdrgRffo/OmniStock-App" }
+  ]
+}

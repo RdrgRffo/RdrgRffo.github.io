@@ -1,0 +1,100 @@
+{
+  "id": 2,
+  "title": "Sincro",
+  "subtitle": "Planificación operativa con gestión de turnos, ausencias y notificaciones en tiempo real",
+  "coverColor": "#16213E",
+  "stack": ["React", "TypeScript", "Node.js", "Express", "MariaDB", "Docker"],
+  "meta": {
+    "period": "2025",
+    "duration": "8 semanas",
+    "role": "Colaborativo / En Equipo — Backend Lead (API, lógica de negocio, Docker). Participación activa en frontend (maquetación, sistema de diseño, componentes funcionales).",
+    "tools": "React 19 · TypeScript 6 · Tailwind CSS 4 · Node.js 22 · Express 5 · Prisma 6 · MariaDB · TanStack Query 5 · Zustand 5 · Socket.IO 4 · Docker"
+  },
+  "images": [
+    { "src": "/studycases/sincro/images/dashboard.png", "caption": "Dashboard general — Horas semanales, actividad reciente, turnos de la semana y métricas operativas." },
+    { "src": "/studycases/sincro/images/users.png", "caption": "Gestión de usuarios — Tabla completa con todos los usuarios del sistema, columnas de rol, sucursal y estado." },
+    { "src": "/studycases/sincro/images/usersFiltered.png", "caption": "Usuarios filtrados — Búsqueda y filtros activos sobre la tabla de usuarios con resultados actualizados en tiempo real." },
+    { "src": "/studycases/sincro/images/createUser.png", "caption": "Crear usuario — Formulario de registro con campos de datos personales, rol, sucursal y credenciales." },
+    { "src": "/studycases/sincro/images/profile.png", "caption": "Perfil de usuario — Vista de perfil con datos personales, información de contacto y rol asignado." },
+    { "src": "/studycases/sincro/images/profile2.png", "caption": "Perfil de usuario (continuación) — Sección de preferencias y configuración de cuenta." },
+    { "src": "/studycases/sincro/images/passwordChange.png", "caption": "Cambio de contraseña — Formulario de actualización de contraseña con validación de seguridad." },
+    { "src": "/studycases/sincro/images/skills.png", "caption": "Gestión de skills — Listado de habilidades o competencias asignables a empleados." },
+    { "src": "/studycases/sincro/images/createSkill.png", "caption": "Crear skill — Formulario para añadir una nueva habilidad al catálogo del sistema." },
+    { "src": "/studycases/sincro/images/monthlyShifts.png", "caption": "Turnos del mes — Vista mensual de la planificación de turnos con calendario y asignaciones." },
+    { "src": "/studycases/sincro/images/weeklyShifts.png", "caption": "Turnos de la semana — Vista semanal detallada con turnos asignados por empleado y día." },
+    { "src": "/studycases/sincro/images/createShift.png", "caption": "Crear turno — Formulario de creación de nuevo turno con selección de empleado, fecha y franja horaria." },
+    { "src": "/studycases/sincro/images/filterShift.png", "caption": "Filtrar turno — Filtros combinables para la visualización de turnos por empleado, fecha y tipo." },
+    { "src": "/studycases/sincro/images/shiftAdjustment.png", "caption": "Ajuste de turno — Modal de ajuste fino de turnos con edición de franjas y empleados." },
+    { "src": "/studycases/sincro/images/shiftTypes.png", "caption": "Tipos de turno — Catálogo de tipos de turno configurables (mañana, tarde, noche, etc.)." },
+    { "src": "/studycases/sincro/images/predefinedShifts.png", "caption": "Turnos predefinidos — Plantillas de turnos reutilizables para asignación rápida." },
+    { "src": "/studycases/sincro/images/operationalPlanning.png", "caption": "Planificación operativa — Vista de planificación con matriz de disponibilidad y paneles de cobertura y riesgos." },
+    { "src": "/studycases/sincro/images/absences.png", "caption": "Gestión de ausencias — Listado de ausencias registradas con estados y filtros." },
+    { "src": "/studycases/sincro/images/normalUserAbsence.png", "caption": "Solicitud de ausencia — Formulario de solicitud de ausencia para usuario estándar." },
+    { "src": "/studycases/sincro/images/branchCrud.png", "caption": "CRUD de sucursales — Gestión de sucursales con tabla, creación, edición y eliminación." },
+    { "src": "/studycases/sincro/images/departmentCrud.png", "caption": "CRUD de departamentos — Gestión de departamentos organizativos con tabla y acciones." },
+    { "src": "/studycases/sincro/images/holiday.png", "caption": "Gestión de festivos — Calendario de días festivos con configuración por sucursal." },
+    { "src": "/studycases/sincro/images/audit.png", "caption": "Panel de auditoría — Listado de cambios con filtros por módulo, actor y rango de fechas." },
+    { "src": "/studycases/sincro/images/notification.png", "caption": "Notificaciones — Centro de notificaciones con listado de alertas y eventos del sistema." },
+    { "src": "/studycases/sincro/images/sidebarExpanded.png", "caption": "Sidebar expandido — Navegación lateral con todas las secciones visibles y agrupadas por módulo." },
+    { "src": "/studycases/sincro/images/sidebarCollapsed.png", "caption": "Sidebar colapsado — Navegación lateral contraída a iconos, maximizando el espacio de trabajo." },
+    { "src": "/studycases/sincro/images/createWebhook.png", "caption": "Crear webhook — Formulario de configuración de webhook para integraciones externas." },
+    { "src": "/studycases/sincro/images/webhookTeams.png", "caption": "Webhook Microsoft Teams — Configuración de webhook para notificaciones en Teams." }
+  ],
+  "readme": {
+    "summary": "Planificación operativa con la precisión de un backend modular y la claridad de un frontend sin fricción.",
+    "sections": [
+      {
+        "heading": "El Problema",
+        "content": "La empresa operaba con una aplicación interna cuya lógica de negocio estaba dispersa, sin trazabilidad real de cambios, sin permisos granulares y con una gestión de cobertura y ausencias que dificultaba la planificación semanal. La falta de modularidad hacía que cualquier evolución del producto fuera costosa y propensa a errores."
+      },
+      {
+        "heading": "La Solución",
+        "content": "Plataforma full stack con API REST modular gobernada por 49 permisos nominales, alcance de datos por rol y trazabilidad completa vía auditoría con rollback. El frontend ofrece KPIs de cobertura, riesgos y disponibilidad en tiempo real, reduciendo la fricción operativa al mínimo."
+      },
+      {
+        "heading": "Diagrama de Arquitectura",
+        "content": "Arquitectura del sistema Sincro — Cliente SPA React 19 con Tailwind CSS, TanStack Query y Socket.IO que se comunica con un backend Node.js/Express organizado en 17 módulos independientes (Router + Controller + Service + Repository). El backend implementa un sistema de 49 permisos nominales con middleware de alcance de datos por sucursal/departamento. Los datos se persisten en MariaDB vía Prisma ORM. Socket.IO proporciona tiempo real para notificaciones push. Todo orquestado con Docker Compose.",
+        "code": "graph TB\n    subgraph Cliente[\"🌐 Cliente (Navegador)\"]\n        direction TB\n        ReactApp[\"React 19 + TypeScript 6<br/>SPA\"]\n        Tailwind[\"Tailwind CSS 4<br/>Sistema de Diseño\"]\n        TanStack[\"TanStack Query 5<br/>Caching & Mutaciones\"]\n        Zustand[\"Zustand 5<br/>Estado Global\"]\n        SocketClient[\"Socket.IO Client<br/>Tiempo Real\"]\n    end\n\n    subgraph Frontend[\"📦 Frontend (Vite + Docker)\"]\n        direction TB\n        Pages[\"Páginas<br/>Dashboard · Turnos · Ausencias<br/>Planificación · Admin\"]\n        Hooks[\"24 Custom Hooks<br/>Orquestación de Datos\"]\n        Components[\"Componentes Atómicos<br/>Tablas · Modales · Formularios\"]\n        Router[\"React Router 7<br/>Rutas Protegidas + RoleGuard\"]\n    end\n\n    subgraph Backend[\"⚙️ Backend (Node.js 22 + Express 5 + Docker)\"]\n        direction TB\n        Middleware[\"Middleware Stack<br/>Auth · CSRF · Rate Limit · Error Handler\"]\n        \n        subgraph Modulos[\"17 Módulos Independientes (Router + Controller + Service + Repository)\"]\n            direction TB\n            Auth[\"Auth<br/>Login · JWT · Refresh\"]\n            Users[\"Usuarios<br/>CRUD · CSV · Roles\"]\n            Schedules[\"Turnos<br/>CRUD · Bulk · Alertas\"]\n            Absences[\"Ausencias<br/>Solicitudes · Aprobación<br/>Colindantes\"]\n            Planning[\"Planificación<br/>Cobertura · Riesgos<br/>Equidad · Sustitutos\"]\n            Branches[\"Sucursales<br/>CRUD · Festivos\"]\n            Departments[\"Departamentos<br/>CRUD · Managers\"]\n            Audit[\"Auditoría<br/>Logs · Rollback\"]\n            Webhooks[\"Webhooks<br/>Notificaciones externas\"]\n            Notifications[\"Notificaciones<br/>Resúmenes · Anuncios\"]\n            Roles[\"Roles<br/>Permisos nominales\"]\n            Skills[\"Skills<br/>CRUD · Asignación\"]\n            ShiftPresets[\"Presets de Turno\"]\n            ScheduleTypes[\"Tipos de Turno\"]\n            InApp[\"Notif. In-App\"]\n            Settings[\"Configuración\"]\n            Common[\"Common<br/>Dependencias · Reactivación\"]\n        end\n\n        PermissionMiddleware[\"Middleware de Permisos<br/>49 permisos nominales\"]\n        ScopeMiddleware[\"Middleware de Alcance<br/>branchId · visibleBranchIds · departamento\"]\n        \n        Realtime[\"Socket.IO Server<br/>Eventos en Tiempo Real\"]\n        Schedulers[\"Schedulers<br/>Resúmenes · Limpieza\"]\n    end\n\n    subgraph Datos[\"💾 Capa de Datos\"]\n        MariaDB[(\"MariaDB 10.11<br/>Base de Datos Relacional\")]\n        PrismaORM[\"Prisma 6 ORM<br/>Migraciones · Seed · Tipado\"]\n    end\n\n    subgraph Infraestructura[\"🐳 Infraestructura Docker\"]\n        DockerCompose[\"Docker Compose\"]\n        Network[\"sincro-network<br/>Bridge\"]\n        Volumes[\"Volúmenes<br/>node_modules · Logs · Data\"]\n    end\n\n    %% Conexiones Frontend\n    Cliente -->|\"Vite Dev Server :15173\"| Frontend\n    Frontend -->|\"API REST :13001\"| Backend\n    Frontend -->|\"WebSocket /socket.io\"| Realtime\n\n    %% Conexiones Backend\n    Backend --> PrismaORM\n    PrismaORM --> MariaDB\n    Realtime -->|\"Eventos push\"| SocketClient\n\n    %% Conexiones Internas Backend\n    Middleware --> Modulos\n    Modulos --> PermissionMiddleware\n    Modulos --> ScopeMiddleware\n    Schedulers --> Modulos\n\n    %% Conexiones Infraestructura\n    DockerCompose --> Network\n    DockerCompose --> Volumes\n\n    %% Estilos\n    classDef frontend fill:#3b82f6,color:#fff,stroke:#2563eb\n    classDef backend fill:#1e3a5f,color:#fff,stroke:#0f2440\n    classDef data fill:#059669,color:#fff,stroke:#047857\n    classDef infra fill:#7c3aed,color:#fff,stroke:#5b21b6\n    classDef client fill:#f59e0b,color:#fff,stroke:#d97706\n\n    class Cliente,Frontend client\n    class Backend,Modulos backend\n    class MariaDB,PrismaORM data\n    class DockerCompose,Network,Volumes infra"
+      },
+
+      {
+        "heading": "Arquitectura & Estructura del Proyecto",
+        "content": "Feature-Based Architecture: el frontend se organiza por páginas administrativas con hooks específicos que encapsulan la lógica de consumo de datos, manteniendo los componentes de UI puros y desacoplados de la capa de red.",
+        "bullets": [
+          "24 custom hooks desacoplan la orquestación de datos (TanStack Query) de la representación visual.",
+          "Componentes base reutilizables: tablas con filtrado/paginado, modales, formularios con validación Zod.",
+          "Rutas protegidas con React Router 7 y guards de autenticación según rol.",
+          "Backend modular: 17 módulos independientes con router, controlador, servicio y repositorio cada uno.",
+          "Docker Compose: MariaDB + Backend + Frontend en red bridge compartida."
+        ]
+      },
+      {
+        "heading": "Soluciones Técnicas",
+        "content": "La API expone 80+ endpoints en 17 módulos independientes con validación Zod. El sistema de 49 permisos nominales se combina con un middleware de alcance que filtra por sucursal y departamento, garantizando que cada usuario vea solo sus datos. La trazabilidad se asegura mediante auditoría con rollback, y las notificaciones en tiempo real vía Socket.IO mantienen al equipo sincronizado sin recargas manuales."
+      },
+      {
+        "heading": "Decisiones Técnicas & Trade-offs",
+        "bullets": [
+          "Arquitectura modular (Router → Controller → Service → Repository) vs. fat controllers: 17 módulos independientes que permiten evolucionar el sistema sin romper contratos. Más boilerplate inicial, pero cada nuevo endpoint no afecta al resto. Descartamos NestJS por sobreingeniería para un equipo pequeño.",
+          "Permisos nominales (49) + alcance de datos por rol vs. RBAC plano: Separar tener permiso para hacer X de poder ver los datos de Y da control fino sin multiplicar rutas. Un general_manager de sucursal A no debe gestionar turnos de B aunque tenga el mismo rol. El coste es mayor complejidad cognitiva y testing de combinaciones permiso × rol × alcance.",
+          "Socket.IO con invalidación de queries vs. SSE o polling: Tiempo real con latencia <100ms para entornos donde múltiples gestores modifican turnos simultáneamente. El bridge de invalidación con TanStack Query evita recargas manuales. El trade-off es gestionar sticky sessions si se escala horizontalmente."
+        ]
+      },
+      {
+        "heading": "Soluciones a Nivel Frontend (Criterio Visual)",
+        "content": "Cada operación sensible despliega flujos de confirmación con feedback visual inmediato: loaders esqueomórficos, toasts de éxito/error y transiciones suaves que eliminan la incertidumbre del usuario.",
+        "bullets": [
+          "Jerarquía visual con Tailwind CSS: paleta restringida, espaciado consistente y tablas con striping, hover states y columnas sticky. Paneles de riesgos con tarjetas y gradientes semánticos (verde/ámbar/rojo) para estado de cobertura.",
+          "Carga progresiva con skeleton screens que respetan la estructura final del layout. Mutaciones optimistas vía TanStack Query actualizan la interfaz al instante mientras se confirma la operación en segundo plano."
+        ]
+      },
+      {
+        "heading": "Mi Impacto",
+        "content": "Mi perfil híbrido —backend sólido con sensibilidad visual— permitió que Sincro no fuera solo una API funcional, sino una plataforma donde la lógica de negocio y la experiencia de administración se potencian mutuamente. Diseñé una arquitectura modular evolucionable, implementé un sistema de permisos y alcance que resuelve casos reales de empresas multi-sede, y construí un frontend donde cada interacción está pensada para que el gestor tome decisiones sin fricción."
+      }
+    ]
+  },
+  "links": [
+    { "label": "GitHub", "url": "https://github.com/RdrgRffo/Sincro-App" }
+  ]
+}

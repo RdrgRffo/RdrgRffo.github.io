@@ -1,0 +1,105 @@
+{
+  "id": 1,
+  "title": "CastellanStore",
+  "subtitle": "E-commerce de relojería artesanal con pagos Stripe, autenticación OAuth2 y almacenamiento S3",
+  "coverColor": "#1A1A2E",
+  "stack": ["React", "TypeScript", "Node.js", "Express", "MongoDB", "Docker", "Stripe", "MinIO"],
+  "meta": {
+    "period": "2025",
+    "duration": "10 semanas",
+    "role": "Individual (Full-Stack Developer)",
+    "tools": "React 19 · Vite 8 · Tailwind CSS 3 · Node.js 22 · Express 4 · TypeScript · MongoDB 7 · Mongoose 8 · JWT + OAuth2 Google · Docker + MinIO S3 · Stripe · Resend"
+  },
+  "images": [
+    { "src": "/studycases/castellanstore/images/landingNotLogged.png", "caption": "Landing page — Hero section, cuadrícula de productos. Tratamiento tipográfico premium y paleta de colores oscura con acentos dorados." },
+    { "src": "/studycases/castellanstore/images/landingLogged.png", "caption": "Landing page (logueado) — Hero section, cuadrícula de productos. Barra de navegación con acceso a perfil, carrito y wishlist." },
+    { "src": "/studycases/castellanstore/images/storeAll.png", "caption": "Catálogo completo — Tienda con todos los productos visibles en cuadrícula, filtros colapsados y paginación. Badges de descuento y estado de stock." },
+    { "src": "/studycases/castellanstore/images/storeFiltered.png", "caption": "Catálogo con filtros activos — Búsqueda, categoría, rango de precio y ordenación combinados. Resultados filtrados con feedback visual inmediato." },
+    { "src": "/studycases/castellanstore/images/productDetail.png", "caption": "Detalle de producto — Galería de imágenes del reloj, selector de cantidad, precio, botón de añadir al carrito y wishlist. Sección de reseñas con valoración media." },
+    { "src": "/studycases/castellanstore/images/cartSide.png", "caption": "Carrito lateral desplegado — Resumen de productos añadidos con cantidades, precios unitarios y subtotal. Botón de proceder al checkout." },
+    { "src": "/studycases/castellanstore/images/checkout1.png", "caption": "Checkout paso 1 — Dirección de envío con formulario de datos personales y selección de dirección guardada." },
+    { "src": "/studycases/castellanstore/images/checkout2.png", "caption": "Checkout paso 2 — Método de envío con opciones y costes asociados. Resumen visual del pedido." },
+    { "src": "/studycases/castellanstore/images/checkout3.png", "caption": "Checkout paso 3 — Método de pago con opciones disponibles. Formulario de tarjeta o pago simulado." },
+    { "src": "/studycases/castellanstore/images/checkout4.png", "caption": "Checkout paso 4 — Resumen final del pedido antes de confirmar. Desglose de productos, envío e impuestos." },
+    { "src": "/studycases/castellanstore/images/fakePayment.jpg", "caption": "Simulador de pago — Pantalla de pago simulado con resumen de la transacción y botón de confirmar." },
+    { "src": "/studycases/castellanstore/images/transaccionStripe.png", "caption": "Transacción Stripe — Confirmación de pago procesado con ID de transacción y estado exitoso." },
+    { "src": "/studycases/castellanstore/images/loginOauth.jpg", "caption": "Login con OAuth2 de Google — Pantalla de inicio de sesión con opción de autenticación mediante Google." },
+    { "src": "/studycases/castellanstore/images/profile.png", "caption": "Perfil de usuario — Datos personales, historial de pedidos y opciones de configuración de cuenta." },
+    { "src": "/studycases/castellanstore/images/myOrders.png", "caption": "Mis pedidos — Listado de pedidos realizados con estados, fechas y totales. Acceso a detalle y factura." },
+    { "src": "/studycases/castellanstore/images/contactUs.png", "caption": "Página de contacto — Formulario de contacto con campos de nombre, email, asunto y mensaje." },
+    { "src": "/studycases/castellanstore/images/aboutUs.png", "caption": "Sobre nosotros — Página institucional con la historia y valores de la marca de relojería." },
+    { "src": "/studycases/castellanstore/images/faq.png", "caption": "FAQ — Preguntas frecuentes sobre envíos, devoluciones, garantía y métodos de pago." },
+    { "src": "/studycases/castellanstore/images/shipping.png", "caption": "Política de envíos — Información detallada sobre plazos, costes y cobertura geográfica de envíos." },
+    { "src": "/studycases/castellanstore/images/warranty.png", "caption": "Garantía — Página informativa sobre la garantía de los productos y proceso de reclamación." },
+    { "src": "/studycases/castellanstore/images/adminDashboard.png", "caption": "Admin Dashboard — Panel de administración con métricas en tiempo real: pedidos, ingresos, stock bajo y actividad reciente." },
+    { "src": "/studycases/castellanstore/images/adminProducts.png", "caption": "Admin Productos — Gestión de productos con tabla, filtros, búsqueda y acciones de crear/editar/eliminar." },
+    { "src": "/studycases/castellanstore/images/adminOrders.png", "caption": "Admin Pedidos — Listado de pedidos con estados, filtros por estado/fecha y acciones de gestión." },
+    { "src": "/studycases/castellanstore/images/adminOrderDetail.png", "caption": "Admin Detalle de pedido — Vista detallada de un pedido con productos, cantidades, dirección y estado." },
+    { "src": "/studycases/castellanstore/images/adminUsers.png", "caption": "Admin Usuarios — Gestión de usuarios con roles, estados y acciones de bloqueo/edición." },
+    { "src": "/studycases/castellanstore/images/adminCoupons.png", "caption": "Admin Cupones — Listado de cupones de descuento con códigos, descuentos, fechas de validez y usos." },
+    { "src": "/studycases/castellanstore/images/adminCoupons2.png", "caption": "Admin Cupones (continuación) — Vista ampliada de la gestión de cupones con filtros y creación." },
+    { "src": "/studycases/castellanstore/images/adminActivity.png", "caption": "Admin Actividad — Panel de auditoría con registro de actividades administrativas y cambios en el sistema." },
+    { "src": "/studycases/castellanstore/images/adminActivityDetail.png", "caption": "Admin Detalle de actividad — Vista detallada de un cambio con estado anterior/posterior y opción de rollback." },
+    { "src": "/studycases/castellanstore/images/emailExample.png", "caption": "Email transaccional — Plantilla de email de bienvenida con cupón de descuento y diseño responsive." },
+    { "src": "/studycases/castellanstore/images/emailExample2.png", "caption": "Email transaccional — Plantilla de confirmación de pedido con resumen de compra y número de seguimiento." }
+  ],
+  "readme": {
+    "summary": "Donde la artesanía analógica encuentra una vitrina digital impecable.",
+    "sections": [
+      {
+        "heading": "El Problema",
+        "content": "Una marca de relojería artesanal necesitaba un e-commerce que reflejara la misma precisión que sus piezas. Los templates genéricos resultaban fríos y desconectados de su identidad visual. Además, requerían gestión de inventario, fidelización automatizada y control de acceso por roles."
+      },
+      {
+        "heading": "La Solución",
+        "content": "Tienda online con arquitectura modular por dominio (autenticación, catálogo, carrito, pedidos, cupones, facturación). Frontend en React + Tailwind CSS con layouts limpios y microinteracciones que evocan un catálogo de alta relojería."
+      },
+      {
+        "heading": "Diagrama de Arquitectura",
+        "content": "Arquitectura del sistema CastellanStore — Cliente SPA React que se comunica con un backend Node.js/Express organizado en módulos por dominio (auth, catalog, cart, orders, coupons, invoicing, admin, reviews, addresses, wishlist, contact, payments, notifications). Los módulos se conectan a MongoDB, MinIO (S3), y APIs externas (Google OAuth2, Stripe, Resend). Un EventBus interno (patrón Observer) orquesta flujos secundarios como emails y facturación.",
+        "code": "graph TB\n    subgraph \"🌐 Cliente\"\n        A[(\"Navegador\")]\n    end\n\n    subgraph \"🐳 Docker Compose\"\n        subgraph \"Frontend (Nginx)\"\n            B[\"React SPA<br/>Vite + Tailwind CSS\"]\n        end\n\n        subgraph \"Backend (Node.js + Express)\"\n            C[\"API Gateway<br/>Express 5 + TypeScript\"]\n            D[\"Middleware Stack\"]\n            E[\"Módulos por Dominio\"]\n            F[\"EventBus<br/>(Patrón Observer)\"]\n            G[\"Servicios\"]\n        end\n\n        subgraph \"Infraestructura\"\n            H[(\"MongoDB 7<br/>Base de Datos\")]\n            I[(\"MinIO<br/>Almacenamiento S3\")]\n        end\n    end\n\n    subgraph \"🌍 APIs Externas\"\n        J[\"Google OAuth2\"]\n        K[\"Stripe API<br/>(Test Mode)\"]\n        L[\"Resend API<br/>(Email Transaccional)\"]\n    end\n\n    A -->|\"HTTP/JSON\"| B\n    B -->|\"API Calls\"| C\n    C --> D\n    D -->|\"authMiddleware\"| E\n    D -->|\"requireRole (RBAC)\"| E\n    D -->|\"globalErrorHandler\"| E\n    E -->|\"auth/\"| H\n    E -->|\"catalog/\"| H\n    E -->|\"cart/\"| H\n    E -->|\"orders/\"| H\n    E -->|\"coupons/\"| H\n    E -->|\"invoicing/\"| H\n    E -->|\"admin/\"| H\n    E -->|\"reviews/\"| H\n    E -->|\"addresses/\"| H\n    E -->|\"wishlist/\"| H\n    E -->|\"contact/\"| H\n    E -->|\"payments/\"| K\n    E -->|\"images/\"| I\n    E -->|\"notifications/\"| L\n    E -->|\"Emite eventos\"| F\n    F -->|\"USER_REGISTERED_EVENT\"| G\n    F -->|\"ORDER_CONFIRMED_EVENT\"| G\n    F -->|\"ORDER_STATUS_CHANGED_EVENT\"| G\n    G -->|\"LoyaltyListener\"| H\n    G -->|\"InvoiceListener → PDF\"| H\n    G -->|\"NotificationListener\"| L\n    E -->|\"Google OAuth\"| J\n    K -->|\"Webhook<br/>payment_intent.succeeded\"| C"
+      },
+      {
+        "heading": "Arquitectura & Estructura del Proyecto",
+        "content": "Feature-Based Architecture en backend: cada dominio de negocio (auth/, orders/, coupons/, catalog/, payments/, reviews/, addresses/, wishlist/, invoicing/, notifications/) es autocontenido con su modelo, servicio, controlador y rutas.",
+        "bullets": [
+          "Custom Hooks: useAuth, useCart, useWishlist desacoplan la lógica de estado de los componentes.",
+          "EventBus propio: Patrón Observer para flujos secundarios (emails, facturas) sin bloquear la respuesta HTTP.",
+          "Email transaccional con Resend: Plantillas HTML responsive con identidad visual de la marca.",
+          "Auditoría con Rollback: Cada acción admin guarda su previousState para revertir cambios.",
+          "Stripe + Webhooks: Pagos en test mode con verificación de firma y eventos para facturación.",
+          "Facturación PDF: Generación automática con rectificativas al cancelar pedidos.",
+          "MinIO/S3: Imágenes de productos en bucket S3-compatible con URLs firmadas.",
+          "Seed automático: 12 relojes, 25 pedidos, 10 usuarios, reseñas, cupones — demo inmediata."
+        ]
+      },
+      {
+        "heading": "Soluciones Técnicas",
+        "content": "Operaciones atómicas en MongoDB para consistencia de inventario en concurrencia. Carrito híbrido con localStorage para anónimos y sincronización con API al iniciar sesión. Suite de testing con 20 colecciones Postman/Newman (150+ aserciones) cubriendo autenticación, catálogo, carrito, pedidos, cupones, facturas, admin y pagos Stripe. Inicialización lazy de Stripe para evitar crashes sin claves configuradas."
+      },
+      {
+        "heading": "Decisiones Técnicas & Trade-offs",
+        "bullets": [
+          "EventBus propio vs. RabbitMQ: Opté por un EventBus síncrono en memoria (Observer). Los flujos secundarios (emails, bienvenida) no requieren persistencia transaccional. Si falla un email, la operación principal ya se completó. RabbitMQ habría añadido otro contenedor y complejidad operativa innecesaria para el volumen actual.",
+          "Carrito híbrido (localStorage + API) vs. solo servidor: localStorage permite que usuarios anónimos añadan productos sin registrarse, reduciendo la tasa de abandono. Al iniciar sesión, el carrito se fusiona con MongoDB. El trade-off es que no hay sincronización entre dispositivos hasta que el usuario se autentica.",
+          "Feature-Based Architecture vs. MVC plano: Módulos por dominio evitan las carpetas models/controllers/services con decenas de archivos mezclados. Cada dominio es autocontenido y fácil de extraer a microservicio. El coste es algo de duplicación en utilidades compartidas, que centralizamos en shared/."
+        ]
+      },
+      {
+        "heading": "Soluciones a Nivel Frontend (Criterio Visual)",
+        "content": "Sistema de diseño coherente con la identidad de marca: paleta de colores cálidos (cuero, dorado, negro premium), tipografía display para títulos y espaciado generoso que trasladan la sensación táctil de un taller de relojería al plano digital.",
+        "bullets": [
+          "Microinteracciones: transiciones suaves en hover de tarjetas (scale 1.05, 500ms), skeleton loading que mantiene jerarquía visual, y scroll reveal que dosifica el contenido con ritmo editorial.",
+          "Navegación intuitiva: breadcrumbs contextuales, filtros combinables con debounce, paginación configurable, y feedback visual claro en cada acción (carrito, wishlist, reseñas)."
+        ]
+      },
+      {
+        "heading": "Mi Impacto",
+        "content": "Mi perfil híbrido —ingeniero con criterio estético— permitió que cada decisión técnica estuviera al servicio de la experiencia de usuario: desde la arquitectura modular que no compromete la velocidad de carga, hasta microinteracciones que hacen que navegar la tienda se sienta tan premium como los propios relojes."
+      }
+    ]
+  },
+  "links": [
+    { "label": "GitHub", "url": "https://github.com/RdrgRffo/CastellanStore" }
+  ]
+}
