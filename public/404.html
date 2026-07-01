@@ -8,13 +8,13 @@
       // Redirigir a la SPA en GitHub Pages
       sessionStorage.redirect = location.href;
     </script>
-    <meta http-equiv="refresh" content="0;URL='/Portfolio/'" />
+    <meta http-equiv="refresh" content="0;URL='/'" />
   </head>
   <body>
     <script>
       // Fallback: si el meta refresh no funciona
       if (!sessionStorage.redirect) {
-        location.href = '/Portfolio/';
+        location.href = '/';
       }
     </script>
   </body>
