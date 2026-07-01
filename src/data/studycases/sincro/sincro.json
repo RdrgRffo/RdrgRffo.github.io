@@ -3,6 +3,7 @@
   "title": "Sincro",
   "subtitle": "Planificación operativa con gestión de turnos, ausencias y notificaciones en tiempo real",
   "coverColor": "#16213E",
+  "thumbnail": "/studycases/sincro/images/thumbnail.png",
   "stack": ["React", "TypeScript", "Node.js", "Express", "MariaDB", "Docker"],
   "meta": {
     "period": "2025",

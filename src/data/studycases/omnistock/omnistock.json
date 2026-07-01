@@ -3,6 +3,7 @@
   "title": "OmniStock",
   "subtitle": "SaaS de inventario consolidado con simulación de presupuestos B2B y analytics BI",
   "coverColor": "#533483",
+  "thumbnail": "/studycases/omnistock/images/thumbnail.png",
   "stack": ["React", "TypeScript", "Java", "Spring Boot", "MariaDB", "Docker"],
   "meta": {
     "period": "2025",

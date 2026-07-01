@@ -3,11 +3,15 @@ import { T } from "../tokens";
 import { Project } from "../types";
 
 const styles = {
-  card: (color: string, isWide: boolean, cursorVisible: boolean): React.CSSProperties => ({
+  card: (color: string, thumbnail: string, isWide: boolean, cursorVisible: boolean): React.CSSProperties => ({
     position: "relative",
     gridColumn: isWide ? "span 2" : undefined,
     aspectRatio: isWide ? "16 / 7" : "4 / 3",
     background: color,
+    backgroundImage: `url(${thumbnail})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
     borderRadius: "4px",
     overflow: "hidden",
     cursor: cursorVisible ? "none" : "pointer",
@@ -121,7 +125,7 @@ export default function ProjectCard({ project, onOpen, isWide, onCursorMove }: P
       role="button"
       tabIndex={0}
       aria-label={`Abrir proyecto: ${project.title}`}
-      style={styles.card(project.coverColor, isWide ?? false, isHovered && hasHover)}
+      style={styles.card(project.coverColor, project.thumbnail, isWide ?? false, isHovered && hasHover)}
       onClick={handleClick}
       onKeyDown={handleKeyDown}
       onMouseEnter={() => setIsHovered(true)}

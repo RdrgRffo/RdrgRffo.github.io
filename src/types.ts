@@ -33,6 +33,7 @@ export interface Project {
   title: string;
   subtitle: string;
   coverColor: string;
+  thumbnail: string;
   stack: string[];
   meta: ProjectMeta;
   images: ProjectImage[];

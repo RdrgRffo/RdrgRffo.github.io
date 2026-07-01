@@ -3,6 +3,7 @@
   "title": "CastellanStore",
   "subtitle": "E-commerce de relojería artesanal con pagos Stripe, autenticación OAuth2 y almacenamiento S3",
   "coverColor": "#1A1A2E",
+  "thumbnail": "/studycases/castellanstore/images/thumbnail.png",
   "stack": ["React", "TypeScript", "Node.js", "Express", "MongoDB", "Docker", "Stripe", "MinIO"],
   "meta": {
     "period": "2025",

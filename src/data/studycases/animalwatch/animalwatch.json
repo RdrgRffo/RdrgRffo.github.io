@@ -3,6 +3,7 @@
   "title": "AnimalWatch",
   "subtitle": "Gestión de protectoras con roles, mapa interactivo, auditoría con rollback y email transaccional",
   "coverColor": "#2D1B69",
+  "thumbnail": "/studycases/animalwatch/images/thumbnail.png",
   "stack": ["React", "TypeScript", "Java", "Spring Boot", "MySQL", "Docker"],
   "meta": {
     "period": "2026",

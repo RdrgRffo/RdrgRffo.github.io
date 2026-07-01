@@ -47,21 +47,19 @@ export default function ProjectsGrid({ projects, onOpenProject, onCursorMove }: 
       <div ref={contentRef} style={revealStyle(contentVisible)}>
         <div style={styles.grid}>
           {projects.map((project, index) => {
-            const isWide = index === projects.length - 1;
             return (
               <div
                 key={project.id}
                 className="project-card"
                 style={{
                   animationDelay: `${index * 0.1}s`,
-                  gridColumn: isWide ? "span 2" : undefined,
                 }}
               >
                 <ProjectCard
                   project={project}
                   index={index}
                   onOpen={onOpenProject}
-                  isWide={isWide}
+                  isWide={false}
                   onCursorMove={onCursorMove}
                 />
               </div>
