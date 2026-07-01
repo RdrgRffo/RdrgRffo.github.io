@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { T } from "../tokens";
 import { Project } from "../types";
+import { imagePath } from "../utils/imagePath";
 
 const styles = {
   card: (color: string, thumbnail: string, isWide: boolean, cursorVisible: boolean): React.CSSProperties => ({
@@ -125,7 +126,7 @@ export default function ProjectCard({ project, onOpen, isWide, onCursorMove }: P
       role="button"
       tabIndex={0}
       aria-label={`Abrir proyecto: ${project.title}`}
-      style={styles.card(project.coverColor, project.thumbnail, isWide ?? false, isHovered && hasHover)}
+      style={styles.card(project.coverColor, imagePath(project.thumbnail), isWide ?? false, isHovered && hasHover)}
       onClick={handleClick}
       onKeyDown={handleKeyDown}
       onMouseEnter={() => setIsHovered(true)}
